@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+html{
+    font-size: 100%;
+}
+body{
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a{
+    /* テキストの装飾をしない=>デフォルト?だと下線が引いてある */
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.logo{
+    width: 210px;
+    margin-top: 14px;
+}
+.main-nav{
+    display: flex;
+    font-size: 1.25px;
+    /* text-trandformは文字の大文字小文字変換に用いられる */
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li{
+    margin-left: 36px;
+}
+.main-nav a{
+    color: #432;
+}
+/* hoverはなんだ？挙動を見ると、テキストにカーソルを合わせると設定した色に変化した 
+＝＞マウスポインタをリンクに重ねた状態らしい*/
+.main-nav a:hover{
+    color: #0bd;
+}
+.page-header{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper{
+    max-width: 1100px;
+    /* 下記のコマンドは中央に配置する指定 */
+    margin: 0 auto;
+    /* スマートフォン向けの余白の指定 */
+    padding: 0 4%;
+}
