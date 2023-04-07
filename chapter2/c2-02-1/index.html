@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="description" content="猫の好きなもの、日々の生活をご紹介">
     <title>猫の実態</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>猫の一日</h1>
-    <p>ひたすら寝ています</p>
+    <header>
+        <h1>野球</h1>
+        <nav>
+            <ul>
+                <li><a href="https://sports.yahoo.co.jp/"> スポーツ</a></li>
+                <li><a href="https://baseball.yahoo.co.jp/npb/">プロ野球</a></li>
+            </ul>
+        </nav>
+    </header>
     <hr>
+    <h4>阪神タイガース開幕スタメン</h4>
     <table border="1">
         <tr>
             <th colspan = "2">選手名/ポジション</th>
@@ -26,9 +38,39 @@
             <td>レフト</td>
         </tr>
     </table>
+    <article class="position_article">
+        ポジション
+        <br>
+        <input type="radio" name="position" name="投手" id = "pitcher">
+        <label for="pitcher">投手</label>
+        <input type="radio" name="position" name="内野手" id = "infielder">
+        <label for="infielder">内野手</label>
+        <input type="radio" name="position" name="外野手" id = "outfielder">
+        <label for="outfielder">外野手</label>
+        <input type="submit" name = "selected" value="選択">
+    </article>
     <hr>
-    <input type="radio" name="position" name="投手">投手
-    <input type="radio" name="position" name="内野手">内野手
-    <input type="radio" name="position" name="外野手">外野手
+    <section>
+        球団
+        <br>
+        <select name="team_name" multiple>
+            <option value="東京ヤクルトスワローズ">東京ヤクルトスワローズ</option>
+            <option value="阪神タイガース" selected>阪神タイガース</option>
+            <option value="横浜DeNAベイスターズ">横浜DeNAベイスターズ</option>
+            <option value="読売ジャイアンツ">読売ジャイアンツ</option>
+            <option value="広島カープ">広島カープ</option>
+            <option value="中日ドラゴンズ">中日ドラゴンズ</option>
+        </select>
+        <input type="submit" name="team" value="選択">
+    </section>
+    <article id = "message_article">
+        応援メッセージ
+        <p>
+            <textarea name="message" placeholder="応援メッセージを入力してください" cols="30" rows="10"></textarea>
+        </p>
+        <input type="submit" name = "message_buttun" value="送信">
+    </article>
+    
+
 </body>
 </html>

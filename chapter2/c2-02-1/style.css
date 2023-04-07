@@ -1,0 +1,36 @@
+@charset "UTF-8";
+body{
+    background-color: #fffeee;
+    color: rgba(10, 130, 165, .5);
+    width: 50vw;
+    height: 50vh; 
+    margin: 25vh 25vw 25vh 25vw;
+}
+header h1{
+    color: #0bd;
+    font-family: serif;
+}
+header nav ul{
+    list-style-type: armenian;
+}
+.position_article {
+    font-size: 2rem;
+    background-color: #fee;
+    border-width: thick;
+    border-style: solid;
+    border-color: tomato;
+}
+section {
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 28px;
+    background-image: url(background_image_sumple.jpeg);
+    background-repeat: repeat;
+    background-size: contain;
+    height: 20vh;
+    color: white;
+    border-bottom : thick solid tomato;
+}
+#message_article {
+    border-bottom: thick solid tomato; 
+}
