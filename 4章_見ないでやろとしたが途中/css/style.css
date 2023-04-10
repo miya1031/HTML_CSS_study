@@ -1,0 +1,44 @@
+@charset "UTF-8";
+html{
+    font-size:100%;
+}
+body{
+    font-family: serif;
+    line-height: 1.7;
+}
+
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.logo-img{
+    width: 210px;
+    margin: 14px;
+}
+
+.home-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav{
+    display: flex;
+    text-transform: uppercase;
+    list-style: none;
+    font-size: 1.25px;
+    margin-top: 34px;
+}
+.main-nav a:hover{
+    color: #0bd;
+}
+.main-nav li{
+    margin-left: 36px;
+}
+
+.wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
