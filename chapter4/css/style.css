@@ -1,12 +1,18 @@
 @charset "UTF-8";
 
 html{
+    /* 最上位層のhtmlのfont-sizeを100%にすると
+    ブラウザの状態や種類によって勝手に変わってくれる。
+     */
     font-size: 100%;
 }
 body{
     font-family: "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
     line-height: 1.7;
     color: #432;
+    /*bodyのfont-sizeは指定されていない。 この場合デフォルト値？
+    htmlタグのfont-sizeと同じ？
+     */
 }
 a{
     /* テキストの装飾をしない=>デフォルト?だと下線が引いてある */
@@ -49,3 +55,60 @@ img{
     /* スマートフォン向けの余白の指定 */
     padding: 0 4%;
 }
+/* home
+ */
+ .home-content{
+    /* alignとは英語で「整列する」 */
+    text-align: center;
+    margin-top: 10%;
+ }
+ .home-content p{
+    /* htmlタグのfont-sizeの1.125倍
+     */
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+ }
+ /* 見出し */
+ .page-title{
+    /* htmlタグのfont-sizeの5倍
+    */
+    font-size: 5rem;
+    font-family: "Philosopher", serif;
+    text-transform: uppercase;
+    /* 公式ではfont-weightの初期値はnormalであるのに
+    なぜ、下記のように定義する必要があるのか
+     */
+    font-weight: normal;
+ }
+ /* ボタン */
+ .button{
+    font-size: 1.375rem;
+    /* backgroundとbackground-colorの違いは？
+    => backgroundで指定する場合はcolor以外の要素も並列的に指定できる
+    指定していない値はデフォルト値。ここではcolorしか指定していない
+    */
+    background: #0bd;
+    color:#fff ;
+    /* border-radiusは境界の外側の角を丸めるプロパティ */
+    border-radius: 5px;
+    padding:18px 32px;
+ }
+ .button:hover{
+    background: #0090aa;
+ }
+
+ /* 大きな背景画像 */
+ .big-bg{
+    background-size: cover;
+    background-position: center top;
+ }
+ #home{
+    background-image: url(../images/main-bg.jpg), linear-gradient(#c9ffbf,#ffafbd);
+    min-height: 100vh;
+    /* 公式ではtext-transfoemの初期値はnoneであるのに
+    なぜ、下記のように定義するのか
+    */
+    text-transform: none;
+    /* background-color: #0bd; */
+    background-blend-mode: luminosity;
+ }
