@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html{
+    font-size: 100%;
+}
+body{
+    font-family: serif;
+    /* 以下忘れていた設定 */
+    line-height: 1.7;/*行間が広くなる*/
+    color: #432;/*デフォルトの文字色*/
+    /* 以上 */
+}
+a{
+    text-decoration: none;
+    /*以下のコマンドはmain-navで指示していた。
+    他のaタブでも以下のコマンドを実行した方が良いと思ったためここに記述した*/
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper{
+    max-width: 1100px;
+    margin: 0 auto;/*画面の中央に配置するコマンド。なんとなく覚えていた*/
+    /*以下忘れていたコマンド。スマートフォン向けの余白の指定*/
+    padding: 0 4%;
+    /*以上*/
+}
+
+/* HEADER */
+
+.main-nav li{
+    /*以下のコマンドは書籍では.main-navにおいて定義していたが
+    ここでも問題ないだろう
+    */
+    list-style: none;
+    /*以上*/
+    margin-left: 36px;
+}
+
+.main-nav a:hover{
+    color: #0bd;
+}
+
+/* img { */
+.logo {
+    width: 210px;/*ここはチラ見*/
+    margin-top: 10px;
+}
+
+.home-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav{
+    display: flex;
+    /*以下のコマンドは書籍には記載なかった
+    ただあってもなくても挙動は変わらなさそう
+    =>というかどのコマンドでも位置は変わらなかった。
+    space-between:最初と最後の子要素を両端に配置し、残りの要素は均等に間隔を空けて配置
+    space-around:両端の子要素も含め均等に感覚を開けて配置
+    center:中央揃え
+    flex-end:行末から配置。右揃え
+    flex-start(初期値):行の開始位置から配置。左揃え
+    */
+    justify-content: space-between;
+    /*以上*/
+    /* 以下のコマンドを忘れた */
+    margin-top: 34px;
+    /*以上*/
+}
+.Big-bg{
+    background-image: url(../images/main-bg.jpg);
+    /* height: 100vh; */
+    /*以下のコマンドを忘れていた
+    画面中央にマグカップが来なかったのはこのせい
+    */
+    background-size: cover;
+    background-position: center top;
+    /*以上*/
+}
+
+/* 以下のコマンドを忘れていた 
+このコマンドがなかったので画面いっぱいに画像が広がらなかった*/
+#home{
+    min-height: 100vh;
+}
+/* 以上 */
+
+.main-content {
+    text-align: center;
+    /* /* margin-top: 10px;これはなぜ効かない？ */
+    /*上のコマンドはpx数が小さすぎた。
+    書籍では10%としている*/
+    margin-top: 10%;
+}
+
+.main-content h2{
+    font-size: 3rem;
+    font-family: 'Philosopher', serif;/*フォント名みた*/
+    /*以下のコマンドを忘れていた*/
+    text-transform: uppercase;
+    font-weight: normal;
+    /*以上*/
+}
+
+/*以下のコマンドを忘れていた*/
+.main-content p{
+    font-size: 1.125rem;
+    margin-top: 10px 0 42px;
+}
+/*以上*/
+
+.button{
+    background-color: #0bd;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    /*以下のコマンドを忘れていた*/
+    font-size: 1.375rem;
+    /*以上*/
+}
+/*以下のコマンドを忘れていた*/
+.button:hover{
+    background: #0090aa;
+}
+/*以上*/
