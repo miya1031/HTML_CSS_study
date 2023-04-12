@@ -97,6 +97,7 @@ img {
     /*上のコマンドはpx数が小さすぎた。
     書籍では10%としている*/
     margin-top: 10%;
+    line-height: 3;
 }
 
 .main-content h2{
@@ -129,3 +130,185 @@ img {
     background: #0090aa;
 }
 /*以上*/
+
+/* NEWS
+----------------------------------------------------- */
+#news{
+    background-image: url(../images/news-bg.jpg);
+    height: 300px;
+    /* 書籍ではそれぞれのpageのbackgroundを定義するタグに"Big-bg"クラスを定義し、
+    以下の2つのプロパティを適用させ、重複して記述しなくても済むようにしていた */
+    background-size: cover;
+    background-position: center top;
+}
+
+.header-page{
+    display: flex;
+    justify-content: space-between;
+}
+
+#news h2{
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 50px;
+    text-transform: uppercase;
+}
+
+footer{
+    background-color: #000000;
+    /* heightだと文字が中央に入ってしまう */
+    /* height: 50px; */
+    padding: 20px 0;
+    color: #fff;
+}
+footer p{
+    text-align: center;
+    line-height: 1.7;
+}
+.news-content{
+    display: flex;
+    margin:30px 30px;
+    /* 以下のコマンドを忘れていた
+    これによりメインバーとサイドバーの間に隙間ができる */
+    justify-content: space-between;
+    /* 以上 */
+}
+
+article{
+    width:70%;
+}
+aside{
+    width:23%;
+}
+
+.post-info{
+    position: relative;
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
+}
+
+.post-date{
+    position: absolute;
+    background-color: #0bd;
+    color: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    text-align: center;
+    padding-top: 12px;
+    /* padding-left: 25px; */
+    font-size: 1.2rem;
+}
+.post-date span{
+    border-top: 1px rgba(255, 255, 255, 0.5) solid;
+    display: block;
+    /* 以下のコマンドを忘れていた 
+    これにより中央の線が短くなった*/
+    width: 60%;
+    margin: 0 auto;
+    /* 以上 */
+}
+
+.post-title{
+    font-size: 2rem;
+}
+
+.post-title,
+.post-cat{
+    margin-left: 150px;
+    line-height: 2;
+}
+/* 以下はnews-contentのjustify-contentをspace-betweenに設定することで解決 */
+/* .news-img{
+    width: 90%;
+} */
+.news-article p{
+    margin-top: 10px;
+}
+
+.aside-title{
+    font-size: 1.2rem;
+    border-bottom: #0bd solid;
+    margin-bottom: 10px;
+}
+
+.category{
+    margin-bottom: 30px;
+}
+
+.category li{
+    list-style: none;
+    border-bottom: 1px gray dashed;
+    line-height: 3;
+}
+
+/* 以下のコマンドを忘れていた */
+.category a {
+    color: #432;
+    padding: 10px;
+    display: block;
+}
+.category a:hover{
+    color: #0bd;
+}
+/* 以上 */
+/* @mediaを用いてもレスポンシズ対応ができないと思ったが
+実際はviewportの設定をしていなかったのが原因だった。 */
+/* 以下はメディアクエリーのやり直し */
+@media (max-width:600px){
+    .news-content{
+        display: flex;
+        flex-direction: column;
+    }
+    /* やはりヘッダークラスは一つのクラスを利用した方が設定時に便利 */
+    .home-header{
+        /* display: flex; */
+        flex-direction: column;
+        text-align: center;
+        /* justify-content: space-between; */
+    }
+    .header-page{
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav li{
+        font-size: 0.85rem;
+        margin-left: 0;
+    }
+
+    .main-nav{
+        justify-content: space-around;
+    }
+
+    #news h2{
+        text-align: center;
+        font-size: 2.5rem;
+        padding-top: 10px;
+        text-transform: uppercase;
+    }
+
+    article{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    aside{
+        width: 100%;
+    }
+    .post-date{
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+    .post-title{
+        font-size: 1rem;
+    }
+
+    .post-cat{
+        font-size: 1rem;
+    }    
+    .post-title,
+    .post-cat{
+        margin-left: 80px;
+    }
+}

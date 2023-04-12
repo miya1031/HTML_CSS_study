@@ -225,7 +225,7 @@ img{
     min-height: 100vh;
  }
  .menu-content {
-    max-width: 560px;
+    max-width: 560px !important;/*重要度を明示的に。ただあまり使わない方が。詳細度などもある。*/
     margin-top: 10%;
  }
  .menu-content .page-title{
