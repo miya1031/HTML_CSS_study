@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html{
+    font-size: 100%;
+}
+body{
+    font-family: sans-serif;/*ゴシック体*/
+    line-height: 1.7;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+/* ヘッダー部分 */
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* border-bottom: 1px orangered solid; */
+}
+
+.logo{
+    width: 200px;
+    height: auto;
+}
+.tosho{
+    width: 65px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.main-nav li{
+    list-style: none;
+    margin-left: 40px;
+}
+
+.main-nav a{
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.main-nav .button{
+    /* background-color: #ff9900; */
+    background:linear-gradient(#ff6600, #ff9900);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.border1{
+    height: 1px;
+    background-color: orangered;
+    border: none;
+}
+
+/* フッター */
+footer{
+    background-color: black;
+    color: #fff;
+    padding: 30px 0;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-link{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-link li{
+    list-style: none;
+    margin-left: 30px;
+}
+.footer-link a{
+    color: #fff;
+}
