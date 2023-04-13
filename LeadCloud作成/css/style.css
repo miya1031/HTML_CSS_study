@@ -271,3 +271,55 @@ background-colorではグラデーションを指定できないので、同時�
 .main-title span{
     color: red;
 }
+
+/* 導入効果 */
+/* 画像の位置を指定して、その後positionプロパティでテキストボックスの位置をしてすれば良いか？ */
+#effect{
+    padding: 70px 0 100px;
+    height: 1720px;/*大きい背景画像の縦の大きさにした*/
+    background-image: url('../images/bg_effect.png');
+    /* 小さい画像は背景画像の上に載っていたので、以下は誤り */
+    /* background: url('../images/bg_effect.png'),
+                url('../images/pic_effect_1.png') top 200px left 75% no-repeat,
+                url('../images/pic_effect_2.png') top 640px left 25% no-repeat,
+                url('../images/pic_effect_3.png') top 1080px left 75% no-repeat; */
+}
+
+.effect-1-img{
+    margin: 80px 0 0 40%;
+}
+.effect-2-img{
+    margin: 100px 40% 0 0 ;
+}
+.effect-3-img{
+    margin: 100px 0 0 40%;
+}
+.effect-1,
+.effect-2,
+.effect-3{
+    position: relative;
+}
+
+.effect-text-1,
+.effect-text-2,
+.effect-text-3{
+    background-color: #fff;
+    max-width: 550px;
+    padding: 30px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 250px;
+}
+
+.effect-text-2{
+    left: 50%;
+}
+
+.introduction-effect header{
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.effect-title{
+    padding: 20px 0;
+}
