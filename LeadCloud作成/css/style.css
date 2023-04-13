@@ -323,3 +323,75 @@ background-colorではグラデーションを指定できないので、同時�
 .effect-title{
     padding: 20px 0;
 }
+
+/* ご利用料金 */
+#fee{
+    background: #EEEEEE;
+    padding: 70px 0 100px;
+    position: relative;
+}
+/* .fee-content{
+    position: relative;
+} */
+
+.fee-info .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.fee-info{
+    /* background: linear-gradient(#ff6600, #ff9900); */
+    background: linear-gradient(orangered, #ff9900);
+    padding: 50px;
+    border-radius: 20px;
+    margin: 50px 0;
+}
+.first-fee,
+.monthly-fee{
+    text-align: center;
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 30px
+}
+.fee-info p{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.fee-info span{
+    color: orangered;
+    font-size: 5rem;
+}
+.fee-info .normal{
+    font-size:1rem;
+}
+.normal span{
+    font-size:1rem;
+}
+
+.fee-info h3{
+    font-size: 3rem;
+}
+
+.fee-button{
+    text-align: center;
+}
+
+.fee-button p{
+    color: #ffffff;
+    font-size: 1rem;
+    padding-top: 50px;
+}
+
+.fee-info .button{
+    background: #EEEEEE;
+    color: orangered;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 20px 60px;
+}
+
+.price-img{
+    position: absolute;
+    bottom: 60px;
+    right: 100px;
+}
