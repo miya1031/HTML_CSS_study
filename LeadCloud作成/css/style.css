@@ -76,6 +76,10 @@ a{
     color: #fff;
     font-weight: normal;
 }
+/* ボタンにカーソルを合わせたら文字の透過率を下げる */
+a span:hover{
+    opacity: 0.5;;
+}
 
 /* colorはこちらで定義しないと上書きされない（優先度・詳細度の関係） */
 .main-nav .button{
@@ -159,4 +163,29 @@ footer{
 }
 .item span{
     color: red;
+}
+
+/* 主な機能一覧 */
+#function{
+    background: #EEEEEE;
+    padding: 70px 0 100px;
+}
+
+.function-content .flex{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.icon-title{
+    padding-top: 35px;
+}
+
+.function-grid{
+    margin-top:70px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.function-grid .item{
+    padding: 20px;
 }
