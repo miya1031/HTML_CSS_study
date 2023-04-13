@@ -189,3 +189,85 @@ footer{
 .function-grid .item{
     padding: 20px;
 }
+/* 下三角 
+参考：https://note.spiqa.design/1581/*/
+.triangle {
+    position: relative;
+}
+
+.triangle:after {
+content: "";
+position: absolute;
+top: 100%;
+right:calc(50% - 60px);
+box-sizing: border-box;
+border-right: 60px solid transparent;
+border-left: 60px solid transparent;
+border-top: 30px solid #fff;
+}
+
+/* 大きいダウンロードボタン */
+/* 背景の色をグラデーションにしながら、画像も設定する方法がわかりませんでした。
+backgroundプロパティで背景色のグラデーションと画像を同時に設定することができなかった
+background-colorではグラデーションを指定できないので、同時に設定するしかなさそう。
+他の方法として、postionプロパティを用いて、電卓の画像を背景に取り込むのではなく、要素として配置することを考えたが
+ボタンと重なった時に見栄えが良くなく断念
+*/
+#download-button{
+    /* background:linear-gradient(#ff6600, #ff9900);
+    height: 500px;
+    position: relative; */
+    background:url('../images/bg_download.png');
+    background-repeat:no-repeat;
+    /*レスポンシブ対応では下記の値を変える必要がありそう*/
+    background-position: top 30px left 800px;
+    background-color:orange;
+    padding-top: 30px;
+}
+
+#download-button .button{
+    background: #EEEEEE;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 30px 80px;
+}
+
+#download-button .big-button{
+    text-align: center;
+    padding: 100px 0;
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+}
+
+#download-button a:hover{
+    opacity: 0.5;
+}
+
+/* .document-img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    opacity: 0.5;
+
+    padding-right: 100px;
+} */
+
+/* お悩み */
+/* #featureとほぼ同じなのでまとめても良いかもしれない */
+#trouble{
+    padding: 70px 0 100px;
+}
+.trouble-grid{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.trouble-grid .item{
+    text-align: center;
+    font-weight: bold;
+}
+.main-title span{
+    color: red;
+}
