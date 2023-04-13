@@ -24,6 +24,13 @@ a{
     background-size: cover;
     background-position: center top;
 }
+
+/* ボディタイトルのプロパティ定義 */
+.main-title{
+    text-align: center;
+    font-size: 2rem;
+}
+
 /* ヘッダー部分 */
 .page-header{
     display: flex;
@@ -130,4 +137,26 @@ footer{
 }
 .headline-1-content p{
     margin-top: 30px;
+}
+
+/* LeadCloudの特徴 */
+#feature{
+    padding: 70px 0 100px;
+}
+.wave{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.feature-grid{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.feature-grid .item{
+    text-align: center;
+    font-weight: bold;
+}
+.item span{
+    color: red;
 }
