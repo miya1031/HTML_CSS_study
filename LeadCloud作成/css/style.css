@@ -93,7 +93,7 @@ a span:hover{
 }
 
 /* フッター */
-footer{
+.sub-footer{
     background-color: black;
     color: #fff;
     padding: 30px 0;
@@ -112,6 +112,32 @@ footer{
 }
 .footer-link a{
     color: #fff;
+}
+
+.main-footer .logo{
+    width: 200px;
+    height: auto;
+}
+
+.main-footer{
+    padding: 30px 0;
+    text-align: center;
+}
+.footer-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+}
+.footer-list li{
+    list-style: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.footer-list a{
+    color: #000000;
+}
+.footer-list a:hover{
+    opacity: 0.5;
 }
 
 /* ヘッドライン１ */
@@ -394,4 +420,25 @@ background-colorではグラデーションを指定できないので、同時�
     position: absolute;
     bottom: 60px;
     right: 100px;
+}
+/* よくある質問 */
+#question{
+    padding: 70px 0 100px;
+}
+
+.question-grid{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 30px;
+}
+.question-grid .item{
+    background-color: #EEEEEE;
+    padding: 30px 50px;
+}
+.question-grid .item span{
+    font-size: 3rem;
+}
+.question-grid .item p{
+    padding: 20px 0 0 50px;
 }
