@@ -9,21 +9,51 @@
     <!-- ファビコンがうまく表示されていない （解決済：ファビコン画像を別途ダウンロードした）-->
     <link rel="icon" type="img/png" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- JQueryをGoogleのCDNで使う -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <!-- ヘッダー -->
     <div id="home">
         <header class="page-header wrapper">
             <h1><a href="index.html"><img class="logo" src="images/logo.png" alt="LeadCloud アポ数最大化の自動電話接続サービス"></a></h1>
-            <img class="tosho" src="images/tosho.svg" alt="東証一部上場">
+            <div class="tosho-img"><img class="tosho" src="images/tosho.svg" alt="東証一部上場"></div>
             <nav>
                 <ul class="main-nav">
-                    <li><a href="#"><span>機能紹介</span></a></li>
-                    <li><a href="#"><span>導入効果</span></a></li>
-                    <li><a href="#"><span>よくあるご質問</span></a></li>
+                    <li><a href="#function"><span>機能紹介</span></a></li>
+                    <li><a href="#effect"><span>導入効果</span></a></li>
+                    <li><a href="#question"><span>よくあるご質問</span></a></li>
                     <li><a class="button" href="download.html"><span>資料ダウンロード</span></a></li>
                 </ul>
             </nav>
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--ここからメニュー-->
+                <div id="menu-content">
+                    <ul>
+                        <li>
+                            <a href="#function">機能紹介</a>
+                        </li>
+                        <li>
+                            <a href="#effect">導入効果</a>
+                        </li>
+                        <li>
+                            <a href="#question">よくあるご質問</a>
+                        </li>
+                    </ul>
+                    <!-- jQueryによってaタグをクリックしたときメニュータブを閉じる機能を付与 -->
+                    <script>
+                    $(function() {
+                        $('#menu-content li a').on('click', function(event) {
+                        $('#menu-btn-check').prop('checked', false);
+                        });
+                    });
+                    </script>
+                </div>
+                <!--ここまでメニュー-->
+            </div>
         </header>
         <hr class="border1">
     </div>
@@ -271,12 +301,12 @@
     <!-- フッター -->
     <footer class="main-footer">
         <div class="wrapper">
-            <img class="logo" src="images/logo.png" alt="">
+            <h1><a href="index.html"><img class="logo" src="images/logo.png" alt=""></a></h1>
             <div>
                 <ul class="footer-list">
-                    <li><a href="#">機能紹介</a></li>
-                    <li><a href="#">導入効果</a></li>
-                    <li><a href="#">よくあるご質問</a></li>
+                    <li><a href="#function">機能紹介</a></li>
+                    <li><a href="#effect">導入効果</a></li>
+                    <li><a href="#question">よくあるご質問</a></li>
                     <li><a href="download.html">資料ダウンロード</a></li>
                     <li><a href="#">お問い合わせ</a></li>
                 </ul>

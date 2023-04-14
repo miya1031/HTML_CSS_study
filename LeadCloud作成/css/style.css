@@ -70,7 +70,7 @@ a{
 /* これ以降にもボタンが出現する */
 .button{
     /* background-color: #ff9900; */
-    background:linear-gradient(#ff6600, #ff9900);
+    background:linear-gradient(orangered, #ff9900);
     padding: 15px 40px;
     border-radius: 15px;
     color: #fff;
@@ -90,6 +90,10 @@ a span:hover{
     height: 1px;
     background-color: orangered;
     border: none;
+}
+
+.page-header h1 a:hover{
+    opacity: 0.5;
 }
 
 /* フッター */
@@ -137,6 +141,10 @@ a span:hover{
     color: #000000;
 }
 .footer-list a:hover{
+    opacity: 0.5;
+}
+
+.main-footer h1 a:hover{
     opacity: 0.5;
 }
 
@@ -311,14 +319,16 @@ background-colorではグラデーションを指定できないので、同時�
                 url('../images/pic_effect_3.png') top 1080px left 75% no-repeat; */
 }
 
+/* 画像をmarginで配置するとスマホ画面になると右側に飛び出てしまうので、
+レスポンシブ対応の時に困る。よって、paddingでやった方が良さそう */
 .effect-1-img{
-    margin: 80px 0 0 40%;
+    padding: 80px 0 0 40%;
 }
 .effect-2-img{
-    margin: 100px 40% 0 0 ;
+    padding: 100px 40% 0 0 ;
 }
 .effect-3-img{
-    margin: 100px 0 0 40%;
+    padding: 100px 0 0 40%;
 }
 .effect-1,
 .effect-2,
@@ -441,4 +451,146 @@ background-colorではグラデーションを指定できないので、同時�
 }
 .question-grid .item p{
     padding: 20px 0 0 50px;
+}
+
+@media screen and (min-width:600px){
+    .hamburger-menu{
+        display: none;
+    }        
+}
+
+/* モバイル版 */
+@media (max-width: 600px) {
+
+    /* ヘッダーの設定 */
+    .main-title{
+        font-size: 2.5rem;
+    }
+    .page-header{
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .page-header .logo{
+        width: 120px;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .page-header .main-nav{
+        display: none;
+    }
+
+    .tosho{
+        margin-left: 0;
+    }
+    /* ヘッダーのハンバーガーボタン
+    モバイル版の時のみ使用 */
+    /* ボタンを実装 */
+    .menu-btn {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        background-color: #ffffff;
+    }
+    /* 下はおそらく三本線の設定 */
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: orangered;
+        position: absolute;
+    }
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    /* ボタンがタップされた時三本線を「×」マークにする */
+    #menu-btn-check:checked ~ .menu-btn span {
+        background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+    }
+    /* 二本のせんでバツマークを作成するのか */
+    #menu-btn-check:checked ~ .menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #menu-btn-check:checked ~ .menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    /* チェックボックスを隠す */
+    #menu-btn-check {
+        display: none;
+    }
+
+    /* メニュー部分を実装 */
+    #menu-content {
+        width: 100%;
+        height: 30%;
+        position: fixed;
+        top: 75px;/*headerの高さ＋横線の高さ+少し*/
+        left: 0;
+        z-index: 80;
+        background-color: #ffffff;
+    }
+    #menu-content ul {
+        padding: 70px 10px 0;
+        text-align: center;
+    }
+    #menu-content ul li {
+        list-style: none;
+        font-weight: bold;
+    }
+    #menu-content ul li a {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        color:black;
+        text-decoration: none;
+        padding: 9px 15px 10px 0;
+        position: relative;
+    }
+    #menu-content ul li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px #ffffff;
+        border-right: solid 2px #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+    /* メニューの開閉を記述 */
+    #menu-content {
+        width: 100%;
+        height: 30%;
+        position: fixed;
+        top: 75px;/*headerの高さ＋横線の高さ+少し*/
+        left: 100%;/*leftの値を変更してメニューを画面外へ*/
+        z-index: 80;
+        background-color: #ffffff;
+        transition: all 0.5s;/*アニメーション設定*/
+    }
+    #menu-btn-check:checked ~ #menu-content {
+        left: 0;/*メニューを画面内へ*/
+    }
+    /* 以上 */
+
+    /* ヘッドライン1 */
+    
 }
