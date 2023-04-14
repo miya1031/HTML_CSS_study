@@ -189,7 +189,7 @@ a span:hover{
 .feature-grid{
     margin-top: 70px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
 }
 .feature-grid .item{
     text-align: center;
@@ -217,7 +217,7 @@ a span:hover{
 .function-grid{
     margin-top:70px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
 }
 
 .function-grid .item{
@@ -296,7 +296,7 @@ background-colorではグラデーションを指定できないので、同時�
 .trouble-grid{
     margin-top: 70px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
 }
 .trouble-grid .item{
     text-align: center;
@@ -372,7 +372,7 @@ background-colorではグラデーションを指定できないので、同時�
 
 .fee-info .grid{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
 }
 .fee-info{
     /* background: linear-gradient(#ff6600, #ff9900); */
@@ -454,9 +454,10 @@ background-colorではグラデーションを指定できないので、同時�
 }
 
 @media screen and (min-width:600px){
-    .hamburger-menu{
+    .hamburger-menu,
+    .fixed-button{
         display: none;
-    }        
+    }
 }
 
 /* モバイル版 */
@@ -592,5 +593,179 @@ background-colorではグラデーションを指定できないので、同時�
     /* 以上 */
 
     /* ヘッドライン1 */
+    .headline-1-content{
+        padding: 10px 0 30px;
+    }
+
+    .headline-1-title{
+        font-size: 1rem;
+    }
+    .company-explanation{
+        font-size: 0.8rem;
+    }
+    #headline-1 .logo{
+        display: none;
+    }
+    #headline-1 {
+        background-image: url("../mobile-images/bg_main_sp.jpg");
+        height: 600px;
+    }
+    #headline-1 .button{
+        font-size: 1rem;
+    }
+
+    /* LeadCloudの特徴 */
+    .feature-grid{
+        gap: 50px;
+    }
+
+    /* 主な機能一覧 */
+    .function-grid{
+        gap: 50px;
+    }
+
+    /* 大きいダウンロードボタン */
+    #download-button{
+        /* background:linear-gradient(#ff6600, #ff9900);
+        height: 500px;
+        position: relative; */
+        /*レスポンシブ対応では下記の値を変える必要がありそう*/
+        background-position: top 10px left 300px;
+        padding-top: 30px;
+        background-size: 50%;
+    }
+    #download-button .button{
+        font-size: 1rem;
+    }
+    #download-button .big-button{
+        padding: 50px 0;
+    }
+
+    /* お悩み */
+    #trouble .main-title{
+        font-size: 1.7rem;
+    }
+    .trouble-grid{
+        gap: 50px;
+    }
+
+    /* 導入効果 */
+    #effect{
+        height: 1200px;
+    }
+
+    #effect .main-title{
+        font-size: 2.1rem;
+    }
+    #effect img{
+        display: none;
+    }
+
+    #effcect .introduction-effect{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+    }
+
+    .effect-text-1,
+    .effect-text-2,
+    .effect-text-3{
+        position: relative;
+        top: 0;
+        margin-top: 30px;
+    }
+
+
+    .effect-text-2{
+        left: 0%;
+    }
+
+    /* 料金 */
+    fee-info{
+        /* background: linear-gradient(#ff6600, #ff9900); */
+        padding: 10px;
+    }
+
+    .first-fee,
+    .monthly-fee{
+        padding: 20px;
+        margin: 10px
+    }
+
+    .fee-button p{
+        font-size: 0.9rem;
+        padding-top: 20px;
+    }
     
+    .fee-info .button{
+        background: #EEEEEE;
+        color: orangered;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px 30px;
+    }
+    
+    .price-img{
+        display: none;
+    }
+    
+    .fee-info h3{
+        font-size: 1.5rem;
+    }
+    
+    /* フッター */
+    .footer-list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footer-list li{
+        margin: 10px 30px;
+    }
+
+    .footer-list{
+        padding: 30px 20px;
+    }
+    .main-footer{
+        padding-bottom: 10px;
+    }
+
+    .footer-content{
+        flex-flow: column;
+    }
+    .footer-link{
+        flex-flow: column;
+    }
+    .footer-link li{
+        margin-left: 0px;
+    }
+    .sub-footer{
+        padding: 10px 0 100px 0;
+    }
+
+    /* 固定ボタン設定 */
+    .fixed-button{
+        background:rgba(0,0,0,0.5);
+        /* opacity: 0.2; */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        height: 10vh;
+    }
+
+    .fixed-button .d-button{
+        padding-top: 20px;
+    }
+
+    .fixed-button .button{
+        /* background-color: #ff9900; */
+        background:linear-gradient(orangered, #ff9900);
+        padding: 15px 40px;
+        border-radius: 15px;
+        color: #fff;
+        font-weight: normal;
+    }
+    .fixed-button .d-button{
+        font-size: 2rem;
+    }
 }
