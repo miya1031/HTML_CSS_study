@@ -460,6 +460,162 @@ background-colorではグラデーションを指定できないので、同時�
     }
 }
 
+/* ヘッドライン1*/
+#headline-2{
+    background:linear-gradient(orangered, #ff9900);
+}
+
+.headline-2-content{
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+}
+
+.headline-2-content h2{
+    font-size: 2.5rem;
+}
+
+.headline-2-content p{
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+/* ダウンロードページ 
+------------------------------------------------------------------*/
+#download-apply{
+    background-color: #EEEEEE;
+    padding: 50px 0;
+}
+#download-apply input[type="text"]{
+    background-color: #ffffff;
+    border: 1px silver solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#download-apply label{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* afterを用いて必須の文字を入れてみる */
+#download-apply .need::after{
+    content: "　必須";
+    font-size: 0.7rem;
+    color: red;
+}
+
+/* 以下セレクトボックスの設定
+参考：https://pote-chil.com/html-maker/selectbox/ */
+#download-apply .selectbox{
+    position: relative;
+}
+
+#download-apply .selectbox::after {
+    position: absolute;
+    content: '';
+    /* point-eventsよくわからない
+    https://developer.mozilla.org/ja/docs/Web/CSS/pointer-events */
+    pointer-events: none;
+}
+
+/* afterは下矢印 */
+#download-apply .selectbox::after {
+    position: absolute;/*なぜここでもう一度定義？*/
+    top: 80%;
+    right: 1.4em;
+    transform: translate(50%, -50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid silver;
+    border-right: 2px solid silver;
+    content: '';
+}
+
+#download-apply .selectbox select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em 3.6em .4em .8em;
+    border: 1px solid silver;
+    border-radius: 5px;
+    color: #333333;
+    font-size: 1em;
+    cursor: pointer;
+    /* 追加 */
+    background-color: #ffffff;
+}
+
+/*focusとは擬似クラスのことで要素をクリックしたりした時の挙動？ 
+https://developer.mozilla.org/ja/docs/Web/CSS/:focus */
+/* #download-apply .selectbox select:focus {
+    outline: 1px solid silver;
+} */
+
+.apply-form{
+    margin: 30px 10px 30px 0px;
+}
+
+.name-form{
+    display: flex;
+    justify-content: space-between;
+}
+.apply-content .small-form{
+    margin: 10px 10px;
+}
+.apply-content .small-form input{
+    width: 100%;
+}
+
+.apply-content .big-form{
+    margin: 30px 10px;
+}
+.apply-content .big-form input,
+.apply-content .big-form select{
+    width: 100%;
+}
+
+.apply-content select{
+    font-weight: normal;
+}
+
+.apply-form .button{
+    width: 100%;
+}
+.apply-form a{
+    color: #ff9900;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+.apply-form .privacy-link{
+    text-align: center;
+    margin: 20px;
+}
+
+.phone-num .phone{
+    background-color: #ffffff;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 30px;
+    line-height: 2;
+    padding: 20px 0;
+    border: 1px silver solid;
+}
+
+.phone-num h2{
+    color: red;
+    font-size: 2.5rem;
+}
+
+#download-apply .apply-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
 /* モバイル版 */
 @media (max-width: 600px) {
 
