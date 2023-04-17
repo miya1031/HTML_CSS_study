@@ -482,24 +482,24 @@ background-colorではグラデーションを指定できないので、同時�
 
 /* ダウンロードページ 
 ------------------------------------------------------------------*/
-#download-apply{
+.apply{
     background-color: #EEEEEE;
     padding: 50px 0;
 }
-#download-apply input[type="text"]{
+.apply input[type="text"]{
     background-color: #ffffff;
     border: 1px silver solid;
     border-radius: 5px;
     padding: 10px;
 }
 
-#download-apply label{
+.apply label{
     font-size: 1rem;
     font-weight: bold;
 }
 
 /* afterを用いて必須の文字を入れてみる */
-#download-apply .need::after{
+.apply .need::after{
     content: "　必須";
     font-size: 0.7rem;
     color: red;
@@ -507,11 +507,11 @@ background-colorではグラデーションを指定できないので、同時�
 
 /* 以下セレクトボックスの設定
 参考：https://pote-chil.com/html-maker/selectbox/ */
-#download-apply .selectbox{
+.apply .selectbox{
     position: relative;
 }
 
-#download-apply .selectbox::after {
+.apply .selectbox::after {
     position: absolute;
     content: '';
     /* point-eventsよくわからない
@@ -520,7 +520,7 @@ background-colorではグラデーションを指定できないので、同時�
 }
 
 /* afterは下矢印 */
-#download-apply .selectbox::after {
+.apply .selectbox::after {
     position: absolute;/*なぜここでもう一度定義？*/
     top: 80%;
     right: 1.4em;
@@ -532,7 +532,7 @@ background-colorではグラデーションを指定できないので、同時�
     content: '';
 }
 
-#download-apply .selectbox select {
+.apply .selectbox select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -610,10 +610,25 @@ https://developer.mozilla.org/ja/docs/Web/CSS/:focus */
     font-size: 2.5rem;
 }
 
-#download-apply .apply-content{
+.apply .two-columns{
     display: flex;
     justify-content: space-between;
     gap: 30px;
+}
+
+/* お問い合わせページ 
+ダウンロードページとほぼ体裁が同じなのでクラス名をapplyに統一している*/
+#inquiry-apply .inquiry-comment{
+    text-align: center;
+}
+.apply-form textarea{
+    background-color: #ffffff;
+    border: 1px silver solid;
+    border-radius: 3px;
+    width: 100%;
+}
+#inquiry-apply .apply-content{
+    padding: 10px 20%;
 }
 
 /* モバイル版 */
@@ -938,8 +953,20 @@ https://developer.mozilla.org/ja/docs/Web/CSS/:focus */
     #headline-2 .headline-2-title{
         font-size: 2rem;
     }
-    #download-apply .apply-content{
+    .apply .two-columns{
         flex-flow: column;
         gap: 30px;
+    }
+    #headline-2 p{
+        font-size: 0.9rem;
+    }
+
+    /* お問い合わせページ */
+    .inquiry-comment{
+        font-size: 0.9rem;
+    }
+    #inquiry-apply .apply-content{
+        padding: 0px;
+        margin: 10px;
     }
 }

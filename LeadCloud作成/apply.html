@@ -24,11 +24,36 @@
                     <li><a href="index.html#function"><span>機能紹介</span></a></li>
                     <li><a href="index.html#effect"><span>導入効果</span></a></li>
                     <li><a href="index.html#question"><span>よくあるご質問</span></a></li>
+                    <li><a class="button" href="download.html"><span>資料ダウンロード</span></a></li>
                 </ul>
             </nav>
             <!-- 3本線だけ表示 -->
             <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
                 <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--ここからメニュー-->
+                <div id="menu-content">
+                    <ul>
+                        <li>
+                            <a href="#function">機能紹介</a>
+                        </li>
+                        <li>
+                            <a href="#effect">導入効果</a>
+                        </li>
+                        <li>
+                            <a href="#question">よくあるご質問</a>
+                        </li>
+                    </ul>
+                    <!-- jQueryによってaタグをクリックしたときメニュータブを閉じる機能を付与 -->
+                    <script>
+                    $(function() {
+                        $('#menu-content li a').on('click', function(event) {
+                        $('#menu-btn-check').prop('checked', false);
+                        });
+                    });
+                    </script>
+                </div>
+                <!--ここまでメニュー-->
             </div>
         </header>
         <hr class="border1">
@@ -39,65 +64,30 @@
         <div class="wrapper">
             <div class="headline-2-content">
                 <h2 class="headline-2-title">
-                    資料ダウンロード
+                    お問い合わせ
                 </h2>
-                <div class="download-explanation">
-                    <p>本フォーム送信完了後、資料を自動返信メールにてお送りさせていただきます。</p>
+                <div class="inquiry-explanation">
+                    <p>ご質問・ご要望がございましたらお気軽にご連絡ください</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- 以上 -->
     <!-- 特徴の説明 -->
-    <main id="download-apply" class="apply">
-        <div class="apply-content two-columns wrapper">
+    <main id="inquiry-apply" class="apply">
+        <div class="apply-content wrapper">
+            <div class="inquiry-comment">
+                <p>下記の入力フォームに必要事項をご記入ください。</p>
+            </div>
             <div class="apply-form">
                 <form action="#">
-                    <div class="name-form">
-                        <div class="small-form">
-                            <label for="family-name" class="need">姓</label>
-                            <input type="text" name="family-name" placeholder="山田">
-                        </div>
-                        <div class="small-form">
-                            <label for="first-name" class="need">名</label>
-                            <input type="text" name="first-name" placeholder="太郎">
-                        </div>
+                    <div class="big-form">
+                        <label for="guest-name" class="need">氏名</label>
+                        <input type="text" name="guest-name" placeholder="山田 太郎">
                     </div>
                     <div class="big-form">
                         <label for="company-name" class="need">会社名</label>
                         <input type="text" name="company-name" placeholder="株式会社じげん">
-                    </div>
-                    <div class="big-form">
-                        <label for="store-name">店舗名</label>
-                        <input type="text" name="store-name" placeholder="虎ノ門店">
-                    </div>
-                    <div class="big-form">
-                        <label for="employee-num" class="selectbox">
-                            <div class="need">従業員数</div>
-                            <select name="employee-num">
-                                <option value="not-selected" selected>選択してください</option>
-                                <option value="-three">~3名</option>
-                                <option value="four-nine">4~9名</option>
-                                <option value="ten-thirty">10~30名</option>
-                                <option value="thirtyone-fifty">31~50名</option>
-                                <option value="fiftyone-onehundred">51~100名</option>
-                                <option value="onehundred=">100名~</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="big-form">
-                        <label for="roll" class="selectbox">
-                            <div class="need">役職</div>
-                            <select name="roll">
-                                <option value="not-selected" selected>選択してください</option>
-                                <option value="executive">役員・経営者</option>
-                                <option value="top-manager">部長・店長</option>
-                                <option value="manager">課長・マネージャー</option>
-                                <option value="leader">主任・リーダー</option>
-                                <option value="general">一般</option>
-                                <option value="others">その他</option>
-                            </select>
-                        </label>
                     </div>
                     <div class="big-form">
                         <label for="p-num" class="need">電話番号</label>
@@ -107,21 +97,13 @@
                         <label for="mail" class="need">メールアドレス</label>
                         <input type="text" name="mail" placeholder="info@zigexn.co.jp">
                     </div>
+                    <div class="big-form">
+                        <p><label for="inquiry-content" class="need">お問い合わせ内容</label></p>
+                        <textarea name="inquiry-content" id="" cols="30" rows="10"></textarea>
+                    </div>
                     <input type="submit" value="下記に同意し入力内容を送信" class="button">
                     <div class="privacy-link"><a href="privacy.html">プライバシーポリシー</a></div>
                 </form>
-
-            </div>
-            <div class="phone-num">
-                <div class="download-img">
-                    <img src="download-images/pic_contact.png" alt="">
-                </div>
-                <div class="phone">
-                    <h3>お電話でのお問い合わせはこちら</h3>
-                    <h2>&#9742;03-5632-0350</h2>
-                    <p>受付時間：平日 10:00~19:00</p>
-                </div>
-
             </div>
         </div>
     </main>
