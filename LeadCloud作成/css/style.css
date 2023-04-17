@@ -247,13 +247,10 @@ background-colorではグラデーションを指定できないので、同時�
 他の方法として、postionプロパティを用いて、電卓の画像を背景に取り込むのではなく、要素として配置することを考えたが
 ボタンと重なった時に見栄えが良くなく断念
 */
-#download-button{
-    /* background:linear-gradient(#ff6600, #ff9900);
-    height: 500px;
-    position: relative; */
+
+/* #download-button{
     background:url('../images/bg_download.png');
     background-repeat:no-repeat;
-    /*レスポンシブ対応では下記の値を変える必要がありそう*/
     background-position: top 30px left 800px;
     background-color:orange;
     padding-top: 30px;
@@ -270,14 +267,55 @@ background-colorではグラデーションを指定できないので、同時�
 #download-button .big-button{
     text-align: center;
     padding: 100px 0;
+}
+
+#download-button a:hover{
+    opacity: 0.5;
+} */
+
+#download-button{
+    background:linear-gradient(orangered, #ff9900);
+    /* height: 500px; */
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.download-area{
+    position: relative;
+}
+#download-button .button{
+    background: #EEEEEE;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 30px 80px;
+}
+
+#download-button .big-button{
+    text-align: center;
+    padding: 100px 0;
     /* position: absolute;
     top: 50%;
     left: 50%; */
+    z-index: 80;
+    position: relative;
+}
+
+.download-area .document-img{
+    margin-left: 600px;
+    position: absolute;
+    z-index: 70;
+    top: 30px;
 }
 
 #download-button a:hover{
     opacity: 0.5;
 }
+
+/* .denzo{
+    width: 400px;
+    height: auto;
+} */
 
 /* .document-img{
     position: absolute;
@@ -801,21 +839,21 @@ https://developer.mozilla.org/ja/docs/Web/CSS/:focus */
         gap: 50px;
     }
 
-    /* 大きいダウンロードボタン */
+    /* 大きいダウンロードボタン
     #download-button{
-        /* background:linear-gradient(#ff6600, #ff9900);
-        height: 500px;
-        position: relative; */
-        /*レスポンシブ対応では下記の値を変える必要がありそう*/
         background-position: top 10px left 300px;
         padding-top: 30px;
         background-size: 50%;
-    }
+    } */
     #download-button .button{
         font-size: 1rem;
     }
     #download-button .big-button{
         padding: 50px 0;
+    }
+    .download-area .document-img{
+        margin-left: 300px;
+        top: 30px;
     }
 
     /* お悩み */
