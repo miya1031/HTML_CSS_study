@@ -903,6 +903,10 @@ https://developer.mozilla.org/ja/docs/Web/CSS/:focus */
     .sub-footer{
         padding: 10px 0 100px 0;
     }
+    /* ボタンがないページは上書き */
+    .not-button{
+        padding: 10px 0 10px 0;
+    }
 
     /* 固定ボタン設定 */
     .fixed-button{
@@ -929,5 +933,13 @@ https://developer.mozilla.org/ja/docs/Web/CSS/:focus */
     }
     .fixed-button .d-button{
         font-size: 2rem;
+    }
+    /* ダウンロードページ */
+    #headline-2 .headline-2-title{
+        font-size: 2rem;
+    }
+    #download-apply .apply-content{
+        flex-flow: column;
+        gap: 30px;
     }
 }
